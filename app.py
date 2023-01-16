@@ -9,9 +9,10 @@ def hello_world():
 
 @app.route("/bot", methods=["POST", "GET"])
 def response():
-    query = dict(request.form)['query']
-    result = query + " " + time.ctime()
-    return jsonify({"response" : result})
+    # query = "" + dict(request.form)['query']
+    # result = query + " " + time.ctime()
+    # return jsonify({"response" : result})
+    return "/bot route response"
 
 if __name__ == "__main__":
     app.debug = True
