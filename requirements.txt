@@ -30,6 +30,7 @@ duplicity==0.8.21
 fasteners==0.14.1
 feedparser==6.0.8
 Flask==2.2.2
+Flask-Cors==3.0.10
 fonttools==4.29.1
 fs==2.4.12
 future==0.18.2
