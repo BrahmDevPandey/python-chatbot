@@ -1,6 +1,7 @@
 from flask import Flask, jsonify, request
 from flask_cors import CORS, cross_origin
 import time
+import getAnswer
 
 app = Flask(__name__)
 cors = CORS(app)
@@ -14,7 +15,7 @@ def hello_world():
 @app.route("/bot", methods=["POST", "GET"])
 def response():
     query = dict(request.form)['query']
-    result = query + " " + time.ctime()
+    result = getAnswer.getReply(query) + " " + time.ctime()
     return jsonify({"response" : result})
 
 if __name__ == "__main__":
