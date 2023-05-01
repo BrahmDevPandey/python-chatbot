@@ -1,0 +1,43 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - fee_structure
+  - admission_process
+  - hod
+  - placement
+  - random
+
+responses:
+  utter_greet:
+    - text: "Hello!"
+    - text: "Hi, there!"
+    - text: "Hi!"
+
+  utter_goodbye:
+    - text: "Bye"
+    - text: "Bye! Take care!"
+    - text: "See you soon!"
+
+  utter_help:
+    - text: "How can I help you?"
+
+  utter_fees:
+    - text: "Sorry, fee structure details have not been added yet."
+
+  utter_admission_process:
+    - text: "Sorry, admission process details have not been added yet."
+
+  utter_hod:
+    - text: "The details of HODs have not been added yet."
+
+  utter_placement:
+    - text: "KIET Group of Institutions has the best placements in Delhi NCR."
+
+  utter_random:
+    - text: "I have not been trained to answer that."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
