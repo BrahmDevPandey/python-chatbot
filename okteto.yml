@@ -1,10 +1,19 @@
-name: python-chatbot
-command: bash
-volumes:
-  - /root/.cache/pip
-sync:
-  - .:/app
-forward:
-  - 5006:5006
-reverse:
-  - 8080:8080
+version: "3.10"
+services:
+  rasa-bot:
+    image: rasa-bot:latest
+    working_dir: /app
+    build: "./"
+    restart: always
+    command: "python app.py"
+    ports:
+      - "5005:5005"
+    public: true
+    networks:
+      - all
+
+networks:
+  all:
+    driver: bridge
+    driver_opts:
+      com.docker.network.enable_ipv6: "true"

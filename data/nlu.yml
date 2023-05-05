@@ -17,6 +17,14 @@ nlu:
       - goodevening
       - good afternoon
 
+  - intent: ask_name
+    examples: |
+      - what is your name
+      - who are you
+      - who is you
+      - tell your name
+      - your name
+
   - intent: goodbye
     examples: |
       - cu
@@ -32,14 +40,14 @@ nlu:
 
   - intent: fee_structure
     examples: |
-      - what is the fees of mca
+      - what is the fees of [mca](course)
       - what is b. tech fees?
       - mca fee?
       - b. pharma admission fees
       - mba yearly expenditure
       - hostel fees
       - mca semester wise fees
-      -  Are there fees a student has to pay per semester to be a student at a college that are separate from class fees?
+      - Are there fees a student has to pay per semester to be a student at a college that are separate from class fees?
       -  Is there any tax in doing online fees submission?
       -  Can I deposit fees in Cash?
       -  Can I deposit fees using Netbanking?
