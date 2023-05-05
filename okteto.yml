@@ -5,9 +5,9 @@ services:
     working_dir: /app
     build: "./"
     restart: always
-    command: "python app.py"
+    command: 'rasa run --cors "*"'
     ports:
-      - "5005:5005"
+      - "5006:5005"
     public: true
     networks:
       - all
