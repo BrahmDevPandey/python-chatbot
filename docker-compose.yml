@@ -15,7 +15,7 @@ services:
     volumes:
       - ./actions:/app/actions
       - ./data:/app/data
-    command: bash -c "rasa run --enable-api --auth-token \"mytoken\" --cors \"*\""
+    command: bash -c "rasa run --cors \"*\""
     ports:
       - "5006:5005"
     public: true
@@ -40,9 +40,9 @@ services:
     working_dir: /app
     build: "./"
     restart: always
-    command: ["flask", "run"]
+    command: "python app.py"
     ports:
-      - "5000:5000"
+      - "5500:5500"
     networks:
       - all
 
