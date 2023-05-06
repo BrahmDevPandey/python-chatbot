@@ -1,12 +1,6 @@
-version: "3.4"
-services:
-  # duckling-server:
-  #   image: rasa/duckling:latest
-  #   ports:
-  #   - 8000:8000
-  #   networks:
-  #   - all
+version: "1.0"
 
+services:
   rasa-server:
     image: rasa-bot:latest
     working_dir: /app
@@ -19,30 +13,6 @@ services:
     ports:
       - "9000:9000"
     public: true
-    networks:
-      - all
-
-  rasa-actions-server:
-    image: rasa-bot:latest
-    working_dir: /app
-    build: "./"
-    restart: always
-    volumes:
-      - ./actions:/app/actions
-    command: ["rasa", "run", "actions"]
-    ports:
-      - "5055:5055"
-    networks:
-      - all
-
-  flask-server:
-    image: rasa-bot:latest
-    working_dir: /app
-    build: "./"
-    restart: always
-    command: "python app.py"
-    ports:
-      - "5500:5500"
     networks:
       - all
 
