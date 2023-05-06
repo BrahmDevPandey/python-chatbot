@@ -4,10 +4,14 @@ intents:
   - greet
   - goodbye
   - fee_structure
+  - fee_misc
   - admission_process
   - hod
   - placement
   - random
+
+actions:
+  - action_utter_fees
 
 responses:
   utter_greet:
@@ -23,8 +27,8 @@ responses:
   utter_help:
     - text: "How can I help you?"
 
-  utter_fees:
-    - text: "Sorry, fee structure details have not been added yet."
+  utter_fees_misc:
+    - text: "Sorry, thesedetails have not been added yet."
 
   utter_admission_process:
     - text: "Sorry, admission process details have not been added yet."

@@ -41,13 +41,20 @@ nlu:
   - intent: fee_structure
     examples: |
       - what is the fees of [mca](course)
-      - what is b. tech fees?
-      - mca fee?
-      - b. pharma admission fees
-      - mba yearly expenditure
-      - hostel fees
-      - mca semester wise fees
-      - Are there fees a student has to pay per semester to be a student at a college that are separate from class fees?
+      - what is [b. tech](course) fees?
+      - [mca](course) fee?
+      - [b. pharma](course) admission fees
+      - [mba](course) yearly expenditure
+      - [hostel](course) fees
+      - [mca](course) semester wise fees
+      -  What is the fee structure of the [hostel](course)?
+      -  fees for [mca](course)
+      -  What are the [hidden](course) fees?
+      -  what is the fees in [mca](course)
+      -  what is the fees in [b.tech](course) [cse](branch)
+
+  - intent: fee_misc
+    examples: |
       -  Is there any tax in doing online fees submission?
       -  Can I deposit fees in Cash?
       -  Can I deposit fees using Netbanking?
@@ -55,7 +62,6 @@ nlu:
       -  How much is the Library charge?
       -  How much is the security amount?
       -  Is the course fees refundable?
-      -  What is the fee structure of the hostel?
       -  Is there any fee concessions for students who belong to weaker economical section?
       -  Is there any Installment scheme?
       -  Are there any scholarships or fee waivers in KIET Group of Institutions?
@@ -63,11 +69,6 @@ nlu:
       -  What are hidden fees?
       -  Is there any tax in doing online fees submission?
       -  Is there any fee concessions for students who belong to weaker economical section?
-      -  fees for mca
-      -  What are the hidden fees?
-      -  what is the fees of mca
-      -  what is the fees in mca
-      -  what is the fees in b.tech cse
       -  Is there any Installment scheme?
       -  what is fees of mca
       -  Can I deposit Hostel fees using Netbanking?

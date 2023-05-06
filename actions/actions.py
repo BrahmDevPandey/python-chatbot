@@ -26,3 +26,16 @@ from rasa_sdk.executor import CollectingDispatcher
 #
 #         return []
 
+class ActionUtterFees(Action):
+
+    def name(self) -> Text:
+        return "action_utter_fees"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        dispatcher.utter_message(text="The fees of course are these:")
+
+        return []
+
