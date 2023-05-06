@@ -11,6 +11,7 @@ FROM python:3.7.7-stretch AS BASE
 
 WORKDIR /app
 
+ADD . /app/
 # upgrade pip version
 RUN pip install --no-cache-dir --upgrade pip
 
