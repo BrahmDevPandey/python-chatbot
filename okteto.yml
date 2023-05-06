@@ -1,34 +1,10 @@
-version: "3.10"
-services:
-  action-server:
-    restart: always
-    command: "rasa run actions"
-    ports:
-      - "5055:5055"
-    public: true
-    networks:
-      - all
-
-  bot:
-    restart: always
-    command: 'rasa run --cors "*"'
-    ports:
-      - "5050:5005"
-    public: true
-    networks:
-      - all
-
-  flask-server:
-    restart: always
-    command: "flask run"
-    ports:
-      - "5000:5000"
-    public: true
-    networks:
-      - all
-
-networks:
-  all:
-    driver: bridge
-    driver_opts:
-      com.docker.network.enable_ipv6: "true"
+name: rasa-server
+command: bash
+volumes:
+- /root/.cache/pip
+sync:
+- .:/app
+forward:
+- 5006:5006
+reverse:
+- 8080:8080
