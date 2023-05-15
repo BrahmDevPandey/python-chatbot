@@ -7,6 +7,11 @@ stories:
       - action: utter_greet
       - action: utter_help
 
+  - story: ask name
+    steps:
+      - intent: ask_name
+      - action: utter_name
+
   - story: fees enquiry
     steps:
       - intent: fee_structure

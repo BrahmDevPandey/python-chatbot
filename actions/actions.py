@@ -34,8 +34,8 @@ class ActionUtterFees(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
-        dispatcher.utter_message(text="The fees of course are these:")
-
+        
+        course = tracker.get_slot('course')
+        dispatcher.utter_message(text=f"The fees of {course} are these:")
         return []
 

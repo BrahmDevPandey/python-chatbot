@@ -9,6 +9,18 @@ intents:
   - hod
   - placement
   - random
+  - ask_name
+
+slots:
+  course:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: course
+
+entities:
+  - course
 
 actions:
   - action_utter_fees
@@ -41,6 +53,9 @@ responses:
 
   utter_random:
     - text: "I have not been trained to answer that."
+
+  utter_name:
+    - text: "I am Bot."
 
 session_config:
   session_expiration_time: 60
