@@ -37,7 +37,7 @@ stories:
   - story: hod enquiry
     steps:
       - intent: hod
-      - action: utter_hod
+      - action: action_utter_hod
 
   - story: placement enquiry
     steps:

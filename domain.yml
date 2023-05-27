@@ -19,11 +19,20 @@ slots:
       - type: from_entity
         entity: course
 
+  department:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: department
+
 entities:
   - course
+  - department
 
 actions:
   - action_utter_fees
+  - action_utter_hod
 
 responses:
   utter_greet:
@@ -43,10 +52,7 @@ responses:
     - text: "Sorry, thesedetails have not been added yet."
 
   utter_admission_process:
-    - text: "Sorry, admission process details have not been added yet."
-
-  utter_hod:
-    - text: "The details of HODs have not been added yet."
+    - text: "Admission can be taken in two ways - Direct Admission and Attempting the CUET exam"
 
   utter_placement:
     - text: "KIET Group of Institutions has the best placements in Delhi NCR."

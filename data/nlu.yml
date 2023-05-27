@@ -41,17 +41,22 @@ nlu:
   - intent: fee_structure
     examples: |
       - what is the fees of [mca](course)
+      - [mca](course) fees
+      - fees of [mca](course)
       - what is [b. tech](course) fees?
       - [mca](course) fee?
       - [b. pharma](course) admission fees
       - [mba](course) yearly expenditure
       - [hostel](course) fees
       - [mca](course) semester wise fees
-      -  What is the fee structure of the [hostel](course)?
-      -  fees for [mca](course)
-      -  What are the [hidden](course) fees?
-      -  what is the fees in [mca](course)
-      -  what is the fees in [b.tech](course) [cse](branch)
+      - What is the fee structure of the [hostel](course)?
+      - fees for [mca](course)
+      - What are the [hidden](course) fees?
+      - what is the fees in [mca](course)
+      - what is the fees in [b.tech](course) [cse](branch)
+      - [library](course) fees 
+      - charge of [library](course)
+      - books fees in [library](course)
 
   - intent: fee_misc
     examples: |
@@ -129,8 +134,10 @@ nlu:
 
   - intent: hod
     examples: |
-      - who is the hod of mba
-      - who is the hod of mca
+      - who is the hod of [mba](department)
+      - who is the hod of [mca](department)
+      - who is the hod of [b.pharm](department)
+      - who is the hod of [b.tech](department)
 
   - intent: placement
     examples: |

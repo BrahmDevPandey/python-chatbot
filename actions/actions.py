@@ -22,9 +22,24 @@ from rasa_sdk.executor import CollectingDispatcher
 #             tracker: Tracker,
 #             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 #
-#         dispatcher.utter_message(text="Hello World!")
+#         dispatcher.utter_message(text="Hello World    !")
 #
 #         return []
+
+fees = {
+    'mca' : 138499,
+    'b.tech': 151239,
+    'mba' : 122890,
+    'hostel': 96000,
+    'library': 0
+}
+
+hod = {
+    'mca': "Dr. Arun Kumar Tripathi",
+    'b.tech': "Dr. Ajay Kumar Srivastava",
+    'mba': "Dr. Atif Ali",
+    'b.pharma': "Dr. Anuj Dubey"
+}
 
 class ActionUtterFees(Action):
 
@@ -36,6 +51,29 @@ class ActionUtterFees(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         
         course = tracker.get_slot('course')
-        dispatcher.utter_message(text=f"The fees of {course} are these:")
+        if course not in fees.keys():
+            dispatcher.utter_message(text=f"The fees of {course} is not added yet.")
+        else:
+            fee = fees[course]
+            if fee == 0:
+                dispatcher.utter_message(text=f"There are no additional fees for {course}")
+            else:
+                dispatcher.utter_message(text=f"The fees of {course} is {fee}")
         return []
 
+
+class ActionUtterFees(Action):
+
+    def name(self) -> Text:
+        return "action_utter_hod"
+
+    def run(self, dispatcher: CollectingDispatcher,     
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+        dept = tracker.get_slot('department')
+        if dept not in hod.keys():
+            dispatcher.utter_message(text=f"I don't have information about this department HOD yet.")
+        else:    
+            dispatcher.utter_message(text=f"The HOD of {dept} is {hod[dept]}")
+        return []
