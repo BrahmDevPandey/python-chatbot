@@ -37,8 +37,8 @@ fees = {
 hod = {
     'mca': "Dr. Arun Kumar Tripathi",
     'b.tech': "Dr. Ajay Kumar Srivastava",
-    'mba': "Dr. Atif Ali",
-    'b.pharma': "Dr. Anuj Dubey"
+    'mba': "Dr. Binkey Srivastava",
+    'b.pharma': "Dr. K.Nagarajan"
 }
 
 class ActionUtterFees(Action):

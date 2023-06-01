@@ -10,6 +10,8 @@ intents:
   - placement
   - random
   - ask_name
+  - thank
+  - deny
 
 slots:
   course:
@@ -62,6 +64,12 @@ responses:
 
   utter_name:
     - text: "I am Bot."
+
+  utter_grateful:
+    - text: "Thank you, too. I there any other query I can resolve?"
+
+  utter_ok:
+    - text: "Okay!"
 
 session_config:
   session_expiration_time: 60

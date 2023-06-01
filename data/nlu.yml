@@ -24,6 +24,9 @@ nlu:
       - who is you
       - tell your name
       - your name
+      - what do i call you
+      - what do people call you?
+      - how to address you?
 
   - intent: goodbye
     examples: |
@@ -37,6 +40,32 @@ nlu:
       - see you around
       - bye bye
       - see you later
+
+  - intent: thank
+    examples: |
+      - thank you so much
+      - thank you
+      - tq
+      - i appreciate it
+      - that was correct answer
+      - absolutely right
+      - very good
+      - lovely answer
+      - good answer
+      - i am satisfied with the answer
+      - the answer is right
+
+  - intent: deny
+    examples: |
+      - no
+      - no more
+      - not applicable
+      - not much
+      - thats all
+      - its over
+      - nope
+      - not
+      - end
 
   - intent: fee_structure
     examples: |
@@ -54,7 +83,7 @@ nlu:
       - What are the [hidden](course) fees?
       - what is the fees in [mca](course)
       - what is the fees in [b.tech](course) [cse](branch)
-      - [library](course) fees 
+      - [library](course) fees
       - charge of [library](course)
       - books fees in [library](course)
 

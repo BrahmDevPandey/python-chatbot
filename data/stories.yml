@@ -48,3 +48,15 @@ stories:
     steps:
       - intent: random
       - action: utter_random
+
+  - story: thank you by user in between a conversation
+    steps:
+      - intent: thank
+      - action: utter_grateful
+
+  - story: thank you by the user at the end
+    steps:
+      - intent: thank
+      - action: utter_grateful
+      - intent: deny
+      - action: utter_ok
